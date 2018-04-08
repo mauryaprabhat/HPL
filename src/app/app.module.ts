@@ -5,7 +5,6 @@ import { RouterModule, Routes} from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-import { TeamsComponent } from './teams/teams.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { PlayerDetailComponent } from './player-detail/player-detail.component';
 import { BidComponent } from './bid/bid.component';
@@ -28,7 +27,6 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     LoginComponent,
-    TeamsComponent,
     PageNotFoundComponent,
     PlayerDetailComponent,
     BidComponent,
