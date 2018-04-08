@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-// import { Router } from '@angular/router';
+ import { Component, OnInit } from '@angular/core';
+ import { Router } from '@angular/router';
+ import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -8,16 +9,35 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(
-    //
-   ) { }
-   username;
-   password = 'admin';
+  constructor(private router: Router, private fb: FormBuilder) {
+    this.forms = fb.group({
+      'name' : this.username,
+      'password' : this.password
+    });
+   }
+   forms: FormGroup;
+   username = new FormControl('', Validators.required );
+   password = new FormControl('', Validators.required );
+
   ngOnInit() {
+
   }
   login() {
-  this.username = 'admin' ;
-  this.password = 'admin';
-   // this.router.navigate(['/auctionHome']);
+     const formmusername = this.username.value;
+     const formpwd = this.password.value;
+     if (formmusername === 'admin') {
+        if (formpwd === 'admin') {
+          alert('Successful Login!!!');
+          this.router.navigate(['/auctionHome']);
+        } else {
+          alert('Please enter correct password!');
+        }
+     } else {
+       alert ('Please enter correct username');
+     }
+     this.reset();
   }
+  reset() {
+    this.forms.reset();
+ }
 }
