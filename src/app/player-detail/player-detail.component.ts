@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PlayerDetailService } from '../services/player-detail.service';
 
 
 @Component({
@@ -8,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlayerDetailComponent implements OnInit {
 
-  constructor() { }
+  constructor( private _playerDetailService: PlayerDetailService) { }
 
+  data: any;
+  imagesource: any;
   ngOnInit() {
+  //  this.PlayerDetail();
+  this._playerDetailService.getPlayerDetail().subscribe(
+    res => this.data = res,
+    (error) => console.log('Error', error),
+    () => console.log('completed!')
+  );
   }
 
+  PlayerDetail() {
+  }
 }

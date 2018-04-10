@@ -2,6 +2,7 @@
  import { Router } from '@angular/router';
  import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -40,4 +41,5 @@ export class LoginComponent implements OnInit {
   reset() {
     this.forms.reset();
  }
+
 }

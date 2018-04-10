@@ -1,3 +1,28 @@
 <p>
   player-detail works!
 </p>
+
+<div>
+  <table style='margin:10px; border: 5px;' >
+    <tr>
+
+      <td>id</td>
+      <td>First Name</td>
+      <td>Last Name</td>
+      <td>Description</td>
+      <td>Image is</td>
+    </tr>
+    <tr *ngFor ='let d of data'>
+
+      <td> {{ d.id}}</td>
+      <td> {{ d.FirstName}}</td>
+      <td> {{ d.LastName}}</td>
+      <td> {{ d.Description}}</td>
+      <td> <img [src]= 'd.ImageUrl' ></td>4
+    </tr>
+  </table>
+</div>
+<div>
+  <button type="button">SAVE</button >
+  <button routerLink ='/bid'>Next</button >
+</div>
