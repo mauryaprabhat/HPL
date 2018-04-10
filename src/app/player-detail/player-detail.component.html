@@ -1,28 +1,66 @@
-<p>
-  player-detail works!
-</p>
+<div class="ui inverted teal clearing segment">
 
-<div>
-  <table style='margin:10px; border: 5px;' >
-    <tr>
+    <img src="../../assets/Logos/HPLLogo.svg" height="40px"><span class="ui circular red label"> Season 4</span>
 
-      <td>id</td>
-      <td>First Name</td>
-      <td>Last Name</td>
-      <td>Description</td>
-      <td>Image is</td>
-    </tr>
-    <tr *ngFor ='let d of data'>
+  <!-- <button class="ui right labeled black icon right floated button">
+  <i class="right arrow icon"></i>
+  Start Auction
+  </button> -->
+  </div>
+ <div  *ngFor ='let d of data' >
 
-      <td> {{ d.id}}</td>
-      <td> {{ d.FirstName}}</td>
-      <td> {{ d.LastName}}</td>
-      <td> {{ d.Description}}</td>
-      <td> <img [src]= 'd.ImageUrl' ></td>4
-    </tr>
-  </table>
-</div>
-<div>
-  <button type="button">SAVE</button >
-  <button routerLink ='/bid'>Next</button >
+
+  <div class="ui relaxed grid">
+    <!-- <div class="one column centered row">
+      <div class="sixteen wide column">
+
+      </div>
+    </div> -->
+    <div class="row">
+      <div class="two wide column">
+      </div>
+      <div class="six wide column">
+        <h1 class="ui huge black label">About - {{d.FirstName | titlecase}} {{d.LastName | titlecase}} </h1>
+        <h3 class="ui header">
+          {{d.Description}}</h3>
+        <h1 class="ui huge black label">
+          Achievements
+        </h1>
+
+        <h3 class="ui header">
+         "{{ d.Achievement}}"
+        </h3>
+        </div>
+      <div class="six wide column">
+          <div routerLink="/teamPlayerDetail" class="ui fluid teal massive right labeled icon button">
+              <i class="right chevron icon"></i>
+              Bid
+            </div>
+
+              <div class="ui fluid  image">
+               <img [src]= 'imagePath'>
+                <div class="ui black ribbon huge label">
+                    {{d.FirstName |titlecase}} {{d.LastName | titlecase}}
+                  </div>
+
+            </div>
+
+          <!-- <div class="ui inverted black  center aligned segment">
+              <h1 class="ui header">
+                <b>Mukesh Singh</b>
+              </h1>
+            </div>
+        <div class="ui basic segment">
+
+          <div class="ui fluid   image">
+            <img src="../../assets/Players/Koala.jpg">
+          </div>
+        </div> -->
+
+      </div>
+      <div class="two wide column">
+      </div>
+    </div>
+
+  </div>
 </div>
