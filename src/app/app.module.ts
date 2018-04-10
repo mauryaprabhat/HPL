@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule} from '@angular/forms';
-import { RouterModule, Routes} from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule  } from '@angular/common/http';
 
@@ -25,7 +25,7 @@ const appRoutes: Routes = [
   { path: 'auctionHome', component: AuctionHomeComponent },
   { path: 'playerDetail', component: PlayerDetailComponent },
   { path: 'bid', component: BidComponent },
-  { path: 'teamPlayerDetail', component: TeamPlayerDetailComponent },
+  { path: 'teamPlayerDetail/:firstName/:lastName/:employeeId', component: TeamPlayerDetailComponent },
   { path: 'teamPlayerAmoutDetail', component: TeamPlayerAmountDetailComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full'},
   { path: '**' , component: PageNotFoundComponent}

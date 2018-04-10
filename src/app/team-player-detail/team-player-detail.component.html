@@ -1,6 +1,105 @@
-<p>
-  team-player-detail works!
-</p>
-<div>
-    <button routerLink ='/playerDetail'>Next Player</button >
+<div class="ui inverted teal clearing segment">
+
+  <img src="../../assets/Logos/HPLLogo.svg" height="40px">
+  <span class="ui circular red label"> Season 4</span>
+
+  <!-- <button class="ui right labeled black icon right floated button">
+  <i class="right arrow icon"></i>
+  Start Auction
+  </button> -->
+</div>
+<div class="ui one column centered grid">
+
+  <div class="ui row">
+    <div class="ui ten wide column">
+      <div class="ui massive black label">Player Name
+        <div class="detail">{{ firstName }} {{lastName}}</div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf='isTeamSelected' class="ui row">
+    <div class="ui ten wide column">
+      <div class="ui black massive fluid label">{{playerTeam}}</div>
+    </div>
+  </div>
+  <div *ngIf='!isTeamSelected' class="ui row">
+
+    <div (click)="selectedTeam('Rajasthan Royals')" class="ui small  bordered image">
+      <img src="../../assets/Logos/RajasthanRoyalsLogo.png">
+    </div>
+
+
+    <div (click)="selectedTeam('Chennai Super Kings')" class="ui small  bordered image">
+      <img src="../../assets/Logos/ChennaiSuperKingsLogo.png">
+    </div>
+
+
+
+
+    <div (click)="selectedTeam('Kings XI Punjab')" class="ui small  bordered image">
+      <img src="../../assets/Logos/kingsXiPunjabLogo.png">
+    </div>
+
+
+
+
+
+    <div (click)="selectedTeam('Mumbai indians')" class="ui small  bordered image">
+      <img src="../../assets/Logos/mumbaiIndiansLogo.png">
+    </div>
+
+
+
+
+    <div (click)="selectedTeam('Delhi Daredevils')" class="ui small bordered image">
+      <img src="../../assets/Logos/delhiDaredevilsLogo.png">
+    </div>
+
+
+
+
+
+    <div (click)="selectedTeam('Sunrisers Hyderabad')" class="ui small bordered image">
+      <img src="../../assets/Logos/sunrisersHyderabadLogo.png">
+    </div>
+
+
+
+
+
+
+    <div (click)="selectedTeam('Royal Challengers')" class="ui small bordered image">
+      <img src="../../assets/Logos/royalChallengersBangaloreLogo.png">
+    </div>
+
+
+
+
+    <div (click)="selectedTeam('Kolkata Knight Riders')" class="ui small bordered image">
+      <img src="../../assets/Logos/kolkataKnightRidersLogo.png">
+    </div>
+
+
+
+  </div>
+
+  <div class="ui row">
+    <div class="ui ten wide column">
+      <form class="ui form" [formGroup]="forms" (ngSubmit)='sold()'>
+        <div class="field">
+          <div class="ui right labeled massive fluid input">
+            <label for="amount" class="ui black label">₹</label>
+            <input formControlName="amount" placeholder="Amount" id="amount" type="number">
+          </div>
+        </div>
+        <div class="field">
+          <button type="submit" class="ui teal fluid massive  button">Sold</button>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+
 </div>

@@ -9,12 +9,19 @@ export class BidService {
 
   constructor( private _httpClient: HttpClient) { }
 
-  URL = '';
+  URL = 'http://localhost:50199/api/AuctionDetails';
   saveBid(Bid: any ): Observable<any> {
     // const headers = new Headers({ 'Content-Type': 'application/json' });
     // const options = new RequestOptions({ headers: headers });
     const headers = new HttpHeaders().set('content-type', 'application/json');
     return this._httpClient.post(this.URL, Bid , { headers });
+  }
+
+  updateStatus(employeeId: number ): Observable<any> {
+    // const headers = new Headers({ 'Content-Type': 'application/json' });
+    // const options = new RequestOptions({ headers: headers });
+    const headers = new HttpHeaders().set('content-type', 'application/json');
+    return this._httpClient.put('http://localhost:50199/api/PutStatusPlayer/' + employeeId, { headers });
   }
 
 }

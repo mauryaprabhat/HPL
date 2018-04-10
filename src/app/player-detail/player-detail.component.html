@@ -32,10 +32,13 @@
         </h3>
         </div>
       <div class="six wide column">
-          <div routerLink="/teamPlayerDetail" class="ui fluid teal massive right labeled icon button">
+          <div [routerLink]="['/teamPlayerDetail',d.FirstName , d.LastName, d.EmployeeId ]" class="ui fluid teal massive right labeled icon button">
               <i class="right chevron icon"></i>
               Bid
             </div>
+            <!-- <div (click)='teamPlayerDetail()' class="ui fluid teal massive right labeled icon button"><i class="right chevron icon"></i>
+              Bid
+            </div> -->
 
               <div class="ui fluid  image">
                <img [src]= 'imagePath'>

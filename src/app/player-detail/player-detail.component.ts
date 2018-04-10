@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PlayerDetailService } from '../services/player-detail.service';
 import { Playerdetail } from '../model/playerdetail';
+import { Router, ActivatedRoute } from '@angular/router';
 
 
 
@@ -11,12 +12,15 @@ import { Playerdetail } from '../model/playerdetail';
 })
 export class PlayerDetailComponent implements OnInit {
 
-  constructor( private _playerDetailService: PlayerDetailService) { }
+  constructor( private _playerDetailService: PlayerDetailService ) { }
   SERVER_IMAGE_PATH = '../../assets/UploadedImages/';
   data: Playerdetail;
   imagePath: string;
   imagesource: any;
+  playerFullName: any;
+
   ngOnInit() {
+
   this._playerDetailService.getPlayerDetail().subscribe(
     res => {this.data = res;
       const image  = this.data[0].ImageUrl;
@@ -30,7 +34,5 @@ export class PlayerDetailComponent implements OnInit {
     () => console.log('completed!')
   );
   }
-  SaveBid() {
 
-  }
 }
