@@ -81,6 +81,12 @@ export class TeamPlayerAmountDetailComponent implements OnInit {
             return d;
           }
         });
+        this.rcPlayers = this.teamPlayerAmountDetailResults.filter( d => {
+          if ( d.TeamName === 'Royal Challengers') {
+            this.miSpent += d.BidAmount;
+            return d;
+          }
+        });
 
       }
         ,

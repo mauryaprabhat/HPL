@@ -86,6 +86,11 @@ export class TeamPlayerDetailComponent implements OnInit {
             return d;
           }
         });
+        this.rcPlayers = res.filter( d => {
+          if ( d.TeamName === 'Royal Challengers') {
+            return d;
+          }
+        });
 
       }
         ,
