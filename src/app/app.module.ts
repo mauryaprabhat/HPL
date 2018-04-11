@@ -16,6 +16,8 @@ import { AuctionHomeComponent } from './auction-home/auction-home.component';
 import { PlayerDetailService } from './services/player-detail.service';
 import { BidService } from './services/bid.service';
 import { TeamPlayerDetailService } from './services/team-player-detail.service';
+import { TeamPlayerAmountDetailService } from './services/team-player-amount-detail.service';
+
 
 
 
@@ -48,7 +50,7 @@ const appRoutes: Routes = [
     HttpClientModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [PlayerDetailService, BidService, TeamPlayerDetailService],
+  providers: [PlayerDetailService, BidService, TeamPlayerDetailService, TeamPlayerAmountDetailService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

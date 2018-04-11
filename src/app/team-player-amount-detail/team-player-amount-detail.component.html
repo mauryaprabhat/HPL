@@ -1,1 +1,182 @@
-<button routerLink="/playerDetail">Next</button>
+<!-- <h1>Team Remaining Amount Detail </h1>
+<div>
+    <table style='margin:10px; border: 5px;' >
+      <tr>
+        <td>Team Name</td>
+        <td>RemainingAmount</td>
+
+      </tr>
+      <tr *ngFor ='let data of teamPlayerRemainingAmount'>
+        <td> {{ data.TeamName}}</td>
+        <td> {{ data.RemainingAmount}}</td>
+      </tr>
+    </table>
+  </div>
+  <h1>Team Player Amount Detail </h1>
+<div>
+  <table style='margin:10px; border: 5px;' >
+    <tr>
+      <td>First Name</td>
+      <td>Last Name</td>
+      <td>TeamName</td>
+      <td>BidAmount</td>
+      <td>RemainingAmount</td>
+
+    </tr>
+    <tr *ngFor ='let data of teamPlayerAmountDetailResults'>
+      <td> {{ data.FirstName}}</td>
+      <td> {{ data.LastName}}</td>
+      <td> {{ data.TeamName}}</td><br/>
+      <td> {{ data.BidAmount}}</td>
+      <td> {{ data.RemainingAmount}}</td>
+    </tr>
+  </table>
+</div>
+<div>
+    <button routerLink="/playerDetail">Next</button>
+</div>
+ -->
+ <div class="ui inverted teal clearing segment">
+
+    <img src="../../assets/Logos/HPLLogo.svg" height="40px">
+    <span class="ui circular red label"> Season 4</span>
+
+    <button  routerLink="/playerDetail" class="ui right labeled black icon right floated button">
+    <i class="right arrow icon"></i>
+    Next Player
+    </button>
+  </div>
+
+  <div class="ui one column centered grid">
+
+      <div class="ui row">
+        <div class="ui sixteen wide column">
+
+  <table class="ui inverted teal striped large collapsing single line celled table">
+
+      <thead>
+          <tr>
+            <th>Team</th>
+            <th>Remaining</th>
+            <th>Next Max Bid</th>
+            <th>Player 1</th>
+            <th>player 2</th>
+            <th>Player 3</th>
+            <th>Player 4</th>
+            <th>Player 5</th>
+            <th>Player 6</th>
+            <th>Player 7</th>
+            <th>Player 8</th>
+            <th>Player 9</th>
+            <th>Player 10</th>
+          </tr>
+        </thead>
+
+
+      <tbody>
+        <tr><th ><h4 class="ui image header">
+            <img src="../../assets/Logos/ChennaiSuperKingsLogo.png" class="ui mini rounded image">
+            <div class="content inverted label">
+                Chennai Superkings
+          </div>
+        </h4>
+        </th>
+        <th>{{cskSpent}}</th>
+        <th>{{(totalAmount - (9-cskPlayers.length)* 50000)}}</th>
+        <th>Sneha</th>
+        <th  *ngFor="let player of cskPlayers " [innerHtml]="player.FirstName"></th>
+      </tr>
+      <tr><th ><h4 class="ui image header">
+          <img src="../../assets/Logos/delhiDaredevilsLogo.png" class="ui mini rounded image">
+          <div class="content inverted label">
+             Delhi DareDevils
+        </div>
+      </h4>
+      </th>
+      <th>{{ddSpent}}</th>
+      <th>{{(totalAmount - (9-ddPlayers.length)* 50000)}}</th>
+      <th>Ashwini</th>
+      <th  *ngFor="let player of ddPlayers " [innerHtml]="player.FirstName"></th>
+    </tr>
+
+    <tr><th ><h4 class="ui image header">
+        <img src="../../assets/Logos/kingsXiPunjabLogo.png" class="ui mini rounded image">
+        <div class="content inverted label">
+            Kings XI Punjab
+      </div>
+    </h4>
+    </th>
+    <th>{{kpSpent}}</th>
+    <th>{{(totalAmount - (9-kpPlayers.length)* 50000)}}</th>
+    <th>Arun</th>
+    <th  *ngFor="let player of kpPlayers " [innerHtml]="player.FirstName"></th>
+  </tr>
+
+  <tr><th ><h4 class="ui image header">
+      <img src="../../assets/Logos/mumbaiIndiansLogo.png" class="ui mini rounded image">
+      <div class="content inverted label">
+          Mumbai Indians
+    </div>
+  </h4>
+  </th>
+  <th>{{miSpent}}</th>
+  <th>{{(totalAmount - (9-miPlayers.length)* 50000)}}</th>
+  <th>Saurabh</th>
+  <th  *ngFor="let player of miPlayers " [innerHtml]="player.FirstName"></th>
+</tr>
+
+<tr><th><h4 class="ui image header">
+    <img src="../../assets/Logos/RajasthanRoyalsLogo.png" class="ui mini rounded image">
+    <div class="content inverted label">
+      Rajasthan Royals
+  </div>
+</h4>
+<th>{{rrSpent}}</th>
+<th>{{(totalAmount - (9-rrPlayers.length)* 50000)}}</th>
+<th>Nisha</th>
+<th  *ngFor="let player of rrPlayers " [innerHtml]="player.FirstName"></th>
+</tr>
+
+<tr><th><h4 class="ui image header">
+    <img src="../../assets/Logos/sunrisersHyderabadLogo.png" class="ui mini rounded image">
+    <div class="content inverted label">
+        Sunrisers Hyderabad
+  </div>
+</h4>
+<th>{{shSpent}}</th>
+<th>{{(totalAmount - (9-shPlayers.length)* 50000)}}</th>
+<th>Deepesh</th>
+<th  *ngFor="let player of shPlayers " [innerHtml]="player.FirstName"></th>
+</tr>
+
+
+<tr><th><h4 class="ui image header">
+    <img src="../../assets/Logos/royalChallengersBangaloreLogo.png" class="ui mini rounded image">
+    <div class="content inverted label">
+        Royal Challengers
+  </div>
+</h4>
+<th>{{rrSpent}}</th>
+<th>{{(totalAmount - (9-rcPlayers.length)* 50000)}}</th>
+<th>Abhishek</th>
+<th  *ngFor="let player of rcPlayers " [innerHtml]="player.FirstName"></th>
+</tr>
+
+<tr><th><h4 class="ui image header">
+    <img src="../../assets/Logos/kolkataKnightRidersLogo.png" class="ui mini rounded image">
+    <div class="content inverted label">
+        Kolkata Knight Riders
+  </div>
+</h4>
+<th>{{kkrSpent}}</th>
+<th>{{(totalAmount - (9-kkrPlayers.length)* 50000)}}</th>
+<th>Pooja</th>
+
+<th  *ngFor="let player of kkrPlayers " [innerHtml]="player.FirstName"></th>
+</tr>
+    </tbody>
+    </table>
+</div>
+</div>
+
+</div>

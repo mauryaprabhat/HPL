@@ -23,14 +23,16 @@
     </div>
   </div>
   <div *ngIf='!isTeamSelected' class="ui row">
-
+<div class= "ui small images ">
     <div (click)="selectedTeam('Rajasthan Royals')" class="ui small  bordered image">
       <img src="../../assets/Logos/RajasthanRoyalsLogo.png">
+      <div class=" ui top right attached red label">{{rrPlayers.length + 1}}</div>
     </div>
 
 
     <div (click)="selectedTeam('Chennai Super Kings')" class="ui small  bordered image">
       <img src="../../assets/Logos/ChennaiSuperKingsLogo.png">
+      <div class=" ui top right attached red label">{{cskPlayers.length + 1}}</div>
     </div>
 
 
@@ -38,6 +40,7 @@
 
     <div (click)="selectedTeam('Kings XI Punjab')" class="ui small  bordered image">
       <img src="../../assets/Logos/kingsXiPunjabLogo.png">
+      <div class=" ui top right attached red label">{{kpPlayers.length + 1}}</div>
     </div>
 
 
@@ -46,6 +49,7 @@
 
     <div (click)="selectedTeam('Mumbai indians')" class="ui small  bordered image">
       <img src="../../assets/Logos/mumbaiIndiansLogo.png">
+      <div class=" ui top right attached red label">{{miPlayers.length + 1}}</div>
     </div>
 
 
@@ -53,6 +57,7 @@
 
     <div (click)="selectedTeam('Delhi Daredevils')" class="ui small bordered image">
       <img src="../../assets/Logos/delhiDaredevilsLogo.png">
+      <div class=" ui top right attached red label">{{ddPlayers.length + 1}}</div>
     </div>
 
 
@@ -61,6 +66,7 @@
 
     <div (click)="selectedTeam('Sunrisers Hyderabad')" class="ui small bordered image">
       <img src="../../assets/Logos/sunrisersHyderabadLogo.png">
+      <div class=" ui top right attached red label">{{shPlayers.length + 1}}</div>
     </div>
 
 
@@ -70,6 +76,7 @@
 
     <div (click)="selectedTeam('Royal Challengers')" class="ui small bordered image">
       <img src="../../assets/Logos/royalChallengersBangaloreLogo.png">
+      <div class=" ui top right attached red label">{{rcPlayers.length + 1}}</div>
     </div>
 
 
@@ -77,9 +84,10 @@
 
     <div (click)="selectedTeam('Kolkata Knight Riders')" class="ui small bordered image">
       <img src="../../assets/Logos/kolkataKnightRidersLogo.png">
+      <div class=" ui top right attached red label">{{kkrPlayers.length + 1}}</div>
     </div>
 
-
+  </div>
 
   </div>
 

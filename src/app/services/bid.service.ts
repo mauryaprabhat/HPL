@@ -9,19 +9,21 @@ export class BidService {
 
   constructor( private _httpClient: HttpClient) { }
 
-  URL = 'http://localhost:50199/api/AuctionDetails';
+  AUCTION_DETAIL_URL = 'http://localhost:50199/api/AuctionDetails';
+  UPDATE_STATUS_URL = 'http://localhost:50199/api/PlayerDetails/';
+
   saveBid(Bid: any ): Observable<any> {
     // const headers = new Headers({ 'Content-Type': 'application/json' });
     // const options = new RequestOptions({ headers: headers });
     const headers = new HttpHeaders().set('content-type', 'application/json');
-    return this._httpClient.post(this.URL, Bid , { headers });
+    return this._httpClient.post(this.AUCTION_DETAIL_URL, Bid , { headers });
   }
 
-  updateStatus(employeeId: number ): Observable<any> {
+  updateStatus(employeeId: number): Observable<any> {
     // const headers = new Headers({ 'Content-Type': 'application/json' });
     // const options = new RequestOptions({ headers: headers });
     const headers = new HttpHeaders().set('content-type', 'application/json');
-    return this._httpClient.put('http://localhost:50199/api/PutStatusPlayer/' + employeeId, { headers });
+    return this._httpClient.put(this.UPDATE_STATUS_URL + employeeId , { headers });
   }
 
 }

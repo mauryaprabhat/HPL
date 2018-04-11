@@ -6,11 +6,11 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class TeamPlayerDetailService {
 
-  URL = '';
+ // PLAYER_TEAM_REMAINING_DETAIL_URL = 'http://localhost:50199/api/AuctionDetails';
   constructor(private _httpClient: HttpClient) { }
 
-  getAllTeamPlayerDetail(): Observable<any[]> {
-    return this._httpClient.get<any>(this.URL);
-  }
+  // getAllTeamPlayerDetail(): Observable<any[]> {
+  //   return this._httpClient.get<any>(this.PLAYER_TEAM_REMAINING_DETAIL_URL);
+  // }
 
 }

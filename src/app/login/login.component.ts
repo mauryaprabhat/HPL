@@ -28,7 +28,6 @@ export class LoginComponent implements OnInit {
      const formpwd = this.password.value;
      if (formmusername === 'admin') {
         if (formpwd === 'admin') {
-          alert('Successful Login!!!');
           this.router.navigate(['/auctionHome']);
         } else {
           alert('Please enter correct password!');
