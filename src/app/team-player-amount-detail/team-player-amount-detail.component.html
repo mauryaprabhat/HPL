@@ -81,7 +81,7 @@
           </div>
         </h4>
         </th>
-        <th>{{cskSpent}}</th>
+        <th>{{totalAmount - cskSpent}}</th>
         <th>{{(totalAmount - (9-cskPlayers.length)* 50000)}}</th>
         <th>Sneha</th>
         <th  *ngFor="let player of cskPlayers " [innerHtml]="player.FirstName"></th>
@@ -93,7 +93,7 @@
         </div>
       </h4>
       </th>
-      <th>{{ddSpent}}</th>
+      <th>{{totalAmount - ddSpent}}</th>
       <th>{{(totalAmount - (9-ddPlayers.length)* 50000)}}</th>
       <th>Ashwini</th>
       <th  *ngFor="let player of ddPlayers " [innerHtml]="player.FirstName"></th>
@@ -106,7 +106,7 @@
       </div>
     </h4>
     </th>
-    <th>{{kpSpent}}</th>
+    <th>{{totalAmount - kpSpent}}</th>
     <th>{{(totalAmount - (9-kpPlayers.length)* 50000)}}</th>
     <th>Arun</th>
     <th  *ngFor="let player of kpPlayers " [innerHtml]="player.FirstName"></th>
@@ -119,7 +119,7 @@
     </div>
   </h4>
   </th>
-  <th>{{miSpent}}</th>
+  <th>{{totalAmount - miSpent}}</th>
   <th>{{(totalAmount - (9-miPlayers.length)* 50000)}}</th>
   <th>Saurabh</th>
   <th  *ngFor="let player of miPlayers " [innerHtml]="player.FirstName"></th>
@@ -131,7 +131,7 @@
       Rajasthan Royals
   </div>
 </h4>
-<th>{{rrSpent}}</th>
+<th>{{totalAmount - rrSpent}}</th>
 <th>{{(totalAmount - (9-rrPlayers.length)* 50000)}}</th>
 <th>Nisha</th>
 <th  *ngFor="let player of rrPlayers " [innerHtml]="player.FirstName"></th>
@@ -143,7 +143,7 @@
         Sunrisers Hyderabad
   </div>
 </h4>
-<th>{{shSpent}}</th>
+<th>{{totalAmount - shSpent}}</th>
 <th>{{(totalAmount - (9-shPlayers.length)* 50000)}}</th>
 <th>Deepesh</th>
 <th  *ngFor="let player of shPlayers " [innerHtml]="player.FirstName"></th>
@@ -156,7 +156,7 @@
         Royal Challengers
   </div>
 </h4>
-<th>{{rrSpent}}</th>
+<th>{{totalAmount - rrSpent}}</th>
 <th>{{(totalAmount - (9-rcPlayers.length)* 50000)}}</th>
 <th>Abhishek</th>
 <th  *ngFor="let player of rcPlayers " [innerHtml]="player.FirstName"></th>
@@ -168,7 +168,7 @@
         Kolkata Knight Riders
   </div>
 </h4>
-<th>{{kkrSpent}}</th>
+<th>{{totalAmount - kkrSpent}}</th>
 <th>{{(totalAmount - (9-kkrPlayers.length)* 50000)}}</th>
 <th>Pooja</th>
 
